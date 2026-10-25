@@ -1,1 +1,54 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tixly Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">T</span><span>Tixly</span></div>
+    <span class="pill">Dashboard Preview</span>
+  </header>
+  <main class="layout">
+    <aside class="sidebar">
+      <p class="muted small">WORKSPACE</p>
+      <a class="nav active" href="#">Overview</a>
+      <a class="nav" href="#ticket-settings">Ticket Settings</a>
+      <a class="nav" href="#support-roles">Support Roles</a>
+      <a class="nav" href="#logs">Logs</a>
+      <div class="sidebar-bottom">Multi-server ticket management</div>
+    </aside>
+    <section class="content">
+      <p class="eyebrow">DISCORD BOT MANAGEMENT</p>
+      <h1>Welcome to Tixly</h1>
+      <p class="subtitle">Manage support tickets for your Discord community.</p>
+      <div class="notice"><strong>Preview mode</strong><br>Discord OAuth2 and live API connection must be configured before this dashboard can manage real servers.</div>
+      <div class="cards">
+        <article class="card"><p class="muted">Open tickets</p><h2>—</h2><span>Connect your bot to load data</span></article>
+        <article class="card"><p class="muted">Closed tickets</p><h2>—</h2><span>Statistics will appear here</span></article>
+        <article class="card"><p class="muted">Selected server</p><h2>None</h2><span>Sign in with Discord to continue</span></article>
+      </div>
+      <section class="card settings" id="ticket-settings">
+        <h2>Ticket Panel Settings</h2>
+        <label for="panelTitle">Panel title</label>
+        <input id="panelTitle" maxlength="100" value="Contact Support">
+        <label for="panelDescription">Panel description</label>
+        <textarea id="panelDescription" maxlength="1000" rows="3">Choose the button below to open a support ticket.</textarea>
+        <button id="previewBtn">Preview panel text</button>
+        <p id="preview" class="preview"></p>
+      </section>
+      <section class="card settings" id="support-roles">
+        <h2>Support Roles</h2><p class="muted">Role selection will be enabled after Discord OAuth2 and the API are connected.</p>
+      </section>
+      <section class="card settings" id="logs">
+        <h2>Logs</h2><p class="muted">Audit logs will appear here after backend integration.</p>
+      </section>
+      <footer> Tixly · English interface · Starter build </footer>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+ 
